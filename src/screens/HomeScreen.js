@@ -1,20 +1,18 @@
 import { View, StyleSheet } from "react-native";
 import MapView from "react-native-maps";
 import Icon from "react-native-vector-icons/FontAwesome";
-import { FloatingAction } from "react-native-floating-action";
-import Share from "react-native-share";
-import ViewShot from "react-native-view-shot";
+
+
 
 function HomeScreen() {
   
-  // const clicked = useCallback(() => {
-  //   ref.current.capture().then(uri => {
-  //     console.log("do something with ", uri);
-  //   })
-  // }, []);
+  
+  const clicked = ()=>{
+    console.log("Screenshot taken");
+  }
   return (
     <>
-      <ViewShot ref={ref}>
+      
         <MapView
           style={{ flex: 1 }}
           region={{
@@ -25,13 +23,13 @@ function HomeScreen() {
           }}
           showsUserLocation={true}
         />
-      </ViewShot>
+      
       <View style={styles.ButtonView}>
         <Icon.Button
           name="facebook"
           backgroundColor="pink"
           style={styles.AddButton}
-          // onPress={clicked}
+          onPress={clicked}
         >
           Take Screenshot
         </Icon.Button>
